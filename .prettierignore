@@ -1,0 +1,12 @@
+.env
+.env.example
+package.json
+package-lock.json
+README.md
+/scripts
+src/setupTests.ts
+src/reportWebVitals.ts
+/build
+/config
+/node_modules
+/.vscode

@@ -1,0 +1,14 @@
+*/.test.jsx
+*/.test.js
+/node_modules
+/build
+/config
+/public
+/scripts
+src/setupTests.js
+src/reportWebVitals.js
+.env
+.env.example
+package.json
+package-lock.json
+README.md
