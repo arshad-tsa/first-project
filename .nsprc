@@ -1,4 +1,5 @@
 {
     "1093882":"Inefficient Regular Expression Complexity in nth-check severity - (High severity)",
-    "1094239":"PostCSS line return parsing error postcss severity - (Moderate severity)"
+    "1094304":"PostCSS line return parsing error- (Moderate severity)",
+    "1094446":"Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code"
 }
