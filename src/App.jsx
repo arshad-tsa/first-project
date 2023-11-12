@@ -1,20 +1,17 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './Pages/About/About';
-import Home from './Pages/Home/Home';
-import Settings from './Pages/Settings/Settings';
+import { Routes, Route } from 'react-router-dom';
+import { Home, Users, UserDetails } from './Page';
+import { ROUTE_CONSTANTS } from './CommonConstant';
 
-const App = () => (
-  <>
-    <BrowserRouter>
-      <Routes>
-        <Route exact path='/' element={<Home />}></Route>
-        <Route exact path='/about' element={<About />}></Route>
-        <Route exact path='/settings' element={<Settings />}></Route>
-      </Routes>
-    </BrowserRouter>
-  </>
-);
+const App = () => {
+  const { HOME_ROUTE, USERS_ROUTE } = ROUTE_CONSTANTS;
+  return (
+    <Routes>
+      <Route path={HOME_ROUTE} element={<Home />} />
+      <Route path={USERS_ROUTE} element={<Users />} />
+      <Route path={`${USERS_ROUTE}/:id`} element={<UserDetails />} />
+    </Routes>
+  );
+};
 
 export default App;

@@ -38,7 +38,7 @@
     "jest-resolve": "27.4.2",
     "jest-watch-typeahead": "1.0.0",
     "mini-css-extract-plugin": "2.4.5",
-    "postcss": "8.4.4",
+    "postcss": "8.4.31",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-loader": "6.2.1",
     "postcss-normalize": "10.0.1",
@@ -49,19 +49,19 @@
     "react-dev-utils": "12.0.1",
     "react-dom": "18.2.0",
     "react-refresh": "0.11.0",
-    "react-router-dom": "6.16.0",
+    "react-router-dom": "6.13.0",
     "resolve": "1.20.0",
     "resolve-url-loader": "4.0.0",
     "sass-loader": "12.3.0",
-    "semver": "7.3.5",
+    "semver": "7.5.4",
     "source-map-loader": "3.0.0",
     "style-loader": "3.3.1",
     "styled-components": "6.0.8",
     "tailwindcss": "3.0.2",
     "terser-webpack-plugin": "5.2.5",
     "web-vitals": "2.1.4",
-    "webpack": "5.64.4",
-    "webpack-dev-server": "4.6.0",
+    "webpack": "5.89.0",
+    "webpack-dev-server": "4.15.1",
     "webpack-manifest-plugin": "4.0.2",
     "workbox-webpack-plugin": "6.4.1"
   },
@@ -72,7 +72,9 @@
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "lint-fix": "eslint \"src/**/*.{js,jsx}\" --fix",
     "format": "prettier --write ./**/*.{js,jsx,css,json} --config ./.prettierrc",
-    "audit": "better-npm-audit audit"
+    "audit": "better-npm-audit audit",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
@@ -93,12 +95,19 @@
     ]
   },
   "devDependencies": {
-    "eslint": "8.49.0",
+    "eslint": "8.3.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-react": "7.33.2",
+    "husky": "8.0.3",
+    "lint-staged": "15.1.0",
     "prettier": "3.0.3"
   },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run audit",
+      "npm run lint"
+    ]},
   "jest": {
     "roots": [
       "<rootDir>/src"
