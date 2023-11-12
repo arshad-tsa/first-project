@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from '../../components/Layout';
 import { ROUTE_CONSTANTS } from '../../CommonConstant';
 
 const Users = () => (
   <>
-    <Header />
     <div>This is Users</div>
     <ul>
       <li>
